@@ -6,6 +6,7 @@ int main() {
   float cateto1, cateto2, hipotenusa, perimetro, cinscrita, ccircunscrita, cexinscrita1, cexinscrita2, cexinscrita3, altura, sp;
   scanf("%f %f", &cateto1, &cateto2);
   hipotenusa = sqrt(cateto1*cateto1 + cateto2*cateto2);
+  printf("\n");
   printf("A hipotenusa desse triangulo e: %f\n", hipotenusa);
   altura = cateto1*cateto2/hipotenusa;
   printf("A altura relativa a hipotenusa desse triangulo e: %f\n", altura);
@@ -20,7 +21,7 @@ int main() {
   cexinscrita3 = sqrt(sp*(sp - cateto1)*(sp - cateto2)/(sp - hipotenusa));
   printf("O raio da circunferencia ex-inscrita ao cateto de lado %f e: %f\n", cateto1, cexinscrita1);
   printf("O raio da circunferencia ex-inscrita ao cateto de lado %f e: %f\n", cateto2, cexinscrita2);
-  printf("O raio da circunferencia ex-inscrita a hipotenusa e: %f\n", cexinscrita3);
+  printf("O raio da circunferencia ex-inscrita a hipotenusa e: %f\n\n", cexinscrita3);
   system("pause");
 return 0;
 }
