@@ -21,5 +21,6 @@ int main() {
   printf("O raio da circunferencia ex-inscrita ao cateto de lado %f e: %f\n", cateto1, cexinscrita1);
   printf("O raio da circunferencia ex-inscrita ao cateto de lado %f e: %f\n", cateto2, cexinscrita2);
   printf("O raio da circunferencia ex-inscrita a hipotenusa e: %f\n", cexinscrita3);
+  system("pause");
 return 0;
 }

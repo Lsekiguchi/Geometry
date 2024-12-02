@@ -10,4 +10,7 @@ int main() {
  printf("A altura do triangulo e: %f\n", altura);
  cinscrita = altura/3;
  printf("O raio da circunferencia inscrita a esse triangulo e: %f\n", cinscrita);
+
+ system("pause");
+ return 0;
 }
