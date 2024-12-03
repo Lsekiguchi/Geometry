@@ -13,8 +13,10 @@ Se você encontrar algo errado no código ou pense que algo novo deva ser adicio
 
 3- _**Retângulo**_: insira o valor dos lados e o programa dá como resultado: a **diagonal**, o **raio da circunferência circunscrita**, o **raio da circunferência inscrita** (caso exista) e sua **área**;
 
-4- _**Pentágono**_: _**ainda não terminado!**_
+4- _**Pentágono**_: insira o valor dos lados e o programa dá como resultado: a **diagonal**, o **raio da circunferência circunscrita**, o **raio da circunferência inscrita** e sua **área**;
 
 5- _**Hexágono**_: insira o valor dos lados e o programa dá como resultado: ambas as **diagonais**, o **raio da circunferência circunscrita**, o **raio da circunferência inscrita** e sua **área**;
 
 6- _**Octógono**_: insira o valor dos lados e o programa dá como resultado: as três **diagonais**, o **raio da circunferência circunscrita**, o **raio da circunferência inscrita** e sua **área**;
+
+7- _**Circunferência**_: _**ainda não terminado!**_
