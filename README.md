@@ -7,6 +7,11 @@ Se você encontrar algo errado no código ou pense que algo novo deva ser adicio
 ---
 - **Conteúdos**:
 
+**Principal**
+
+_**Programa Final**_: use **qualquer** dos conteúdos abaixo em um só programa
+
+---
 1- _**Triângulo retângulo**_: insira os valores dos catetos e o programa dá como resultado: a **altura** relativa a hipotenusa, o **raio da circunferência inscrita**, o **raio da circunferência circunscrita**, a **hipotenusa** e os **raios das circunferências ex-inscritas** ao triângulo;
 
 2- _**Triângulo equilátero**_: insira o valor do lado e o programa dá como resultado: a **altura**, o **raio da circunferência inscrita**, o **raio da circunferência circunscrita**, o **raio das circunferências ex-inscritas** e sua **área**;
