@@ -24,4 +24,6 @@ _**Programa Final**_: use **qualquer** dos conteúdos abaixo em um só programa
 
 6- _**Octógono**_: insira o valor dos lados e o programa dá como resultado: as três **diagonais**, o **raio da circunferência circunscrita**, o **raio da circunferência inscrita** e sua **área**;
 
-7- _**Circunferência**_: _**ainda não terminado!**_
+7- _**Eneágono**_: _**Ainda não terminado**_;
+
+8- _**Circunferência**_: insira o valor do raio e o programa dá como resultado: os lados do triângulo equilátero inscrito, triângulo equilátero circunscrito, quadrado inscrito, pentágono regular inscrito, hexágono regular inscrito, heptágono regular inscrito, octógono regular inscrito, eneágono regular inscrito, decágono regular inscrito, dodecágono regular inscrito, icoságono regular inscrito;
