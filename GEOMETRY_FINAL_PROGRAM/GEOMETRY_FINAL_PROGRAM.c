@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 int main() {
-    printf("\aEscolha uma figura geometrica:\nTriangulo retangulo: 1\nTriangulo equilatero: 2\nRetangulo: 3\nPentagono regular: 4\nHexagono regular: 5\nOctogono regular: 6\nCircunferencia: 7\n\nDigite aqui: ");
+    printf("\aEscolha uma figura geometrica:\nTriangulo retangulo: 1\nTriangulo equilatero: 2\nRetangulo: 3\nPentagono regular: 4\n");
+    printf("Hexagono regular: 5\nOctogono regular: 6\nEneagono regular: 7\nCircunferencia: 8\n\nDigite aqui: ");
     unsigned short figura;
     scanf("%i", &figura);
     const float r2 = 1.4142;
@@ -117,6 +118,28 @@ int main() {
  printf("A area do octogono e: %f\n\n", area8);
     }
     if (figura == 7) {
+    printf("Digite o valor do lado do eneagono regular: ");
+    float lado9, area9, ccircunscrita9, cinscrita9, diagonal91, diagonal92, diagonal93;
+    const float sin40 = 0.6428;
+    const float cos40 = 0.766;
+    const float tg20 = 0.364;
+    scanf("%f", &lado9);
+    printf("\n");
+    ccircunscrita9 = lado9/sqrt(2 - 2*cos40);
+    cinscrita9 = lado9/(2*tg20);
+    diagonal91 = lado9*sqrt(2 + 2*cos40);
+    diagonal92 = lado9*(1 + 2*cos40);
+    diagonal93 = (lado9 + sqrt(4*diagonal92*diagonal92 - 3*lado9*lado9))/2;
+    area9 = 4.5*ccircunscrita9*ccircunscrita9*sin40;
+
+    printf("O raio da circunferencia circunscrita ao eneagono e: %f\n", ccircunscrita9);
+    printf("O raio da circunferencia inscrita ao eneagono e: %f\n", cinscrita9);
+    printf("O tamanho da menor diagonal do eneagono e: %f\n", diagonal91);
+    printf("O tamanho da segunda diagonal do eneagono e: %f\n", diagonal92);
+    printf("O tamanho da maior diagonal do eneagono e: %f\n", diagonal93);
+    printf("A area do eneagono e: %f\n\n", area9);
+    }
+    if (figura == 8) {
     float raio, trianguloc0, trianguloi0, quadrado0, pentagono0, hexagono0, heptagono0, octogono0, eneagono0, decagono0, dodecagono0, icosagono0;
     const float r2 = 1.4142;
     const float r3 = 1.732;
