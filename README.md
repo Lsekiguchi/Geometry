@@ -4,6 +4,11 @@ Criado para te _**ajudar**_ a não gastar excesso de energia e esforço em conta
 
 Se você encontrar algo errado no código ou pense que algo novo deva ser adicionado, por favor crie uma issue/pull request ou entre em contato comigo pelos meios de comunicação do meu perfil. Não esqueça que sou apenas um estudante tentando fazer algo novo.
 
+Feito 100% em: <div>
+<img align="center" alt="C" height="40" width="40" src="https://github.com/devicons/devicon/blob/master/icons/c/c-original.svg">
+
+</div>
+
 ---
 - **Conteúdos**:
 
