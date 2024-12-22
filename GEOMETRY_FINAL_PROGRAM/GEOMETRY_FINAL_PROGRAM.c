@@ -3,7 +3,7 @@
 
 int main() {
     printf("\aEscolha uma figura geometrica:\nTriangulo retangulo: 1\nTriangulo equilatero: 2\nRetangulo: 3\nPentagono regular: 4\n");
-    printf("Hexagono regular: 5\nOctogono regular: 6\nEneagono regular: 7\nCircunferencia: 8\n\nDigite aqui: ");
+    printf("Hexagono regular: 5\nOctogono regular: 6\nEneagono regular: 7\nDodecagono regular: 8\nCircunferencia: 9\n\nDigite aqui: ");
     unsigned short figura;
     scanf("%i", &figura);
     const float r2 = 1.4142;
@@ -131,7 +131,6 @@ int main() {
     diagonal92 = lado9*(1 + 2*cos40);
     diagonal93 = (lado9 + sqrt(4*diagonal92*diagonal92 - 3*lado9*lado9))/2;
     area9 = 4.5*ccircunscrita9*ccircunscrita9*sin40;
-
     printf("O raio da circunferencia circunscrita ao eneagono e: %f\n", ccircunscrita9);
     printf("O raio da circunferencia inscrita ao eneagono e: %f\n", cinscrita9);
     printf("O tamanho da menor diagonal do eneagono e: %f\n", diagonal91);
@@ -140,6 +139,27 @@ int main() {
     printf("A area do eneagono e: %f\n\n", area9);
     }
     if (figura == 8) {
+    printf("Digite o valor do lado do dodecaedro regular: ");
+    float lado12, area12, ccircunscrita12, cinscrita12, diagonal121, diagonal122, diagonal123, diagonal124, diagonal125;
+    scanf("%f", &lado12);
+    ccircunscrita12 = lado12*sqrt(2)/(sqrt(3) - 1);
+    cinscrita12 = sqrt(4*ccircunscrita12*ccircunscrita12 - lado12*lado12)/2;
+    diagonal121 = lado12*(sqrt(6) + sqrt(2))/2;
+    diagonal122 = lado12*(sqrt(3) + 1);
+    diagonal123 = ccircunscrita12*sqrt(3);
+    diagonal124 = sqrt(4*ccircunscrita12*ccircunscrita12 - lado12*lado12);
+    diagonal125 = 2*ccircunscrita12;
+    area12 = 3*ccircunscrita12*ccircunscrita12;
+    printf("\nO raio da circunferencia circunscrita e: %f\n", ccircunscrita12);
+    printf("O raio da circunferencia inscrita e: %f\n", cinscrita12);
+    printf("A menor diagonal mede: %f\n", diagonal121);
+    printf("A quarta maior diagonal mede: %f\n", diagonal122);
+    printf("A terceira maior diagonal mede: %f\n", diagonal123);
+    printf("A segunda maior diagonal mede: %f\n", diagonal124);
+    printf("A maior diagonal mede: %f\n", diagonal125);
+    printf("A area do dodecaedro e: %f\n\n", area12);
+    }
+    if (figura == 9) {
     float raio, trianguloc0, trianguloi0, quadrado0, pentagono0, hexagono0, heptagono0, octogono0, eneagono0, decagono0, dodecagono0, icosagono0;
     const float r2 = 1.4142;
     const float r3 = 1.732;
@@ -161,7 +181,6 @@ int main() {
     decagono0 = raio*sqrt(2 - 2*cos36);
     dodecagono0 = raio*sqrt(2 - r3);
     icosagono0 = raio*sqrt(2 - 2*cos18);
-
     printf("\n");
     printf("O lado do triangulo inscrito a circunferencia e: %f\n", trianguloi0);
     printf("O lado do triangulo circunscrito a circunferencia e: %f\n", trianguloc0);
