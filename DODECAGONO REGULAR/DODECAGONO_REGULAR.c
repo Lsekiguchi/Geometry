@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main() {
-    printf("Digite o valor do lado do dodecaedro regular: ");
+    printf("Digite o valor do lado do dodecagono regular: ");
     float lado12, area12, ccircunscrita12, cinscrita12, diagonal121, diagonal122, diagonal123, diagonal124, diagonal125;
     scanf("%f", &lado12);
     ccircunscrita12 = lado12*sqrt(2)/(sqrt(3) - 1);
@@ -20,7 +20,7 @@ int main() {
     printf("A terceira maior diagonal mede: %f\n", diagonal123);
     printf("A segunda maior diagonal mede: %f\n", diagonal124);
     printf("A maior diagonal mede: %f\n", diagonal125);
-    printf("A area do dodecaedro e: %f\n\n", area12);
+    printf("A area do dodecagono e: %f\n\n", area12);
 
     system("pause");
     return 0;

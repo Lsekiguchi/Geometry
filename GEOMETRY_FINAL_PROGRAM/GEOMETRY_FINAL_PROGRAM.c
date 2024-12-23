@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 int main() {
-    printf("\aEscolha uma figura geometrica:\nTriangulo retangulo: 1\nTriangulo equilatero: 2\nRetangulo: 3\nPentagono regular: 4\n");
-    printf("Hexagono regular: 5\nOctogono regular: 6\nEneagono regular: 7\nDodecagono regular: 8\nCircunferencia: 9\n\nDigite aqui: ");
+    setlocale(LC_ALL, "Portuguese");
+    printf("\aEscolha uma figura geométrica:\n\nTriângulo retângulo: 1\nTriângulo equilátero: 2\nRetângulo: 3\nPentágono regular: 4\n");
+    printf("Hexágono regular: 5\nOctógono regular: 6\nEneágono regular: 7\nDodecágono regular: 8\nCircunferência: 9\n\nDigite aqui: ");
     unsigned short figura;
     scanf("%i", &figura);
     const float r2 = 1.4142;
@@ -13,45 +15,45 @@ int main() {
     const float cos36 = 0.1564;
     printf("\n");
     if (figura == 1) {
-  printf("Digite o valor dos catetos de um triangulo retangulo: ");
+  printf("Digite o valor dos catetos de um triângulo retângulo: ");
   float cateto1, cateto2, hipotenusa, perimetro, cinscrita, ccircunscrita, cexinscrita1, cexinscrita2, cexinscrita3, altura, sp;
   scanf("%f %f", &cateto1, &cateto2);
   hipotenusa = sqrt(cateto1*cateto1 + cateto2*cateto2);
   printf("\n");
-  printf("A hipotenusa desse triangulo e: %f\n", hipotenusa);
+  printf("A hipotenusa desse triângulo é: %f\n", hipotenusa);
   altura = cateto1*cateto2/hipotenusa;
-  printf("A altura relativa a hipotenusa desse triangulo e: %f\n", altura);
+  printf("A altura relativa a hipotenusa desse triângulo é: %f\n", altura);
   ccircunscrita = hipotenusa/2;
-  printf("O raio da circunferencia circunscrita e: %f\n", ccircunscrita);
+  printf("O raio da circunferência circunscrita é: %f\n", ccircunscrita);
   perimetro = cateto1 + cateto2 + hipotenusa;
   cinscrita = perimetro/2 - hipotenusa;
-  printf("O raio da circunferencia inscrita e: %f\n", cinscrita);
+  printf("O raio da circunferência inscrita é: %f\n", cinscrita);
   sp = perimetro/2;
   cexinscrita1 = sqrt(sp*(sp - cateto2)*(sp - hipotenusa)/(sp - cateto1));
   cexinscrita2 = sqrt(sp*(sp - cateto1)*(sp - hipotenusa)/(sp - cateto2));
   cexinscrita3 = sqrt(sp*(sp - cateto1)*(sp - cateto2)/(sp - hipotenusa));
-  printf("O raio da circunferencia ex-inscrita ao cateto de lado %f e: %f\n", cateto1, cexinscrita1);
-  printf("O raio da circunferencia ex-inscrita ao cateto de lado %f e: %f\n", cateto2, cexinscrita2);
-  printf("O raio da circunferencia ex-inscrita a hipotenusa e: %f\n\n", cexinscrita3);
+  printf("O raio da circunferência ex-inscrita ao cateto de lado %f é: %f\n", cateto1, cexinscrita1);
+  printf("O raio da circunferência ex-inscrita ao cateto de lado %f é: %f\n", cateto2, cexinscrita2);
+  printf("O raio da circunferência ex-inscrita à hipotenusa é: %f\n\n", cexinscrita3);
     }
     if (figura == 2) {
- printf("Digite o valor do lado do triangulo equilatero: ");
+ printf("Digite o valor do lado do triângulo equilátero: ");
  float lado3, altura, area3, cinscrita3, ccircunscrita3, cexinscrita3;
  scanf("%f", &lado3);
  altura = lado3*r3/2;
  printf("\n");
- printf("A altura do triangulo e: %f\n", altura);
+ printf("A altura do triângulo é: %f\n", altura);
  cinscrita3 = altura/3;
- printf("O raio da circunferencia inscrita a esse triangulo e: %f\n", cinscrita3);
+ printf("O raio da circunferência inscrita a esse triângulo é: %f\n", cinscrita3);
  area3 = lado3*lado3*r3/4;
  ccircunscrita3 = 2*cinscrita3;
- printf("O raio da circunferencia circunscrita a esse triangulo e: %f\n", ccircunscrita3);
+ printf("O raio da circunferência circunscrita a esse triângulo é: %f\n", ccircunscrita3);
  cexinscrita3 = lado3*r3/2;
- printf("O raio da circunferencia ex-inscrita a esse triangulo e: %f\n", cexinscrita3);
- printf("A area do triangulo e: %f\n\n", area3);
+ printf("O raio da circunferência ex-inscrita a esse triângulo é: %f\n", cexinscrita3);
+ printf("A área do triângulo é: %f\n\n", area3);
     }
     if (figura == 3) {
- printf("Digite os valores dos lados do retangulo: ");
+ printf("Digite os valores dos lados do retângulo: ");
  float lado1, lado2, diagonal4, area4, cinscrita4, ccircunscrita4;
  scanf("%f %f", &lado1, &lado2);
  printf("\n");
@@ -60,65 +62,65 @@ int main() {
  ccircunscrita4 = diagonal4/2;
  if (lado1 == lado2) {
     cinscrita4 = lado1/2;
-    printf("O raio da circunferencia inscrita e %f\n", cinscrita4);
+    printf("O raio da circunferência inscrita é: %f\n", cinscrita4);
     }
     else {
-        printf("Nao ha circunferencia inscrita a um retangulo que nao e quadrado\n");
+        printf("Não há circunferência inscrita a um retângulo que não é quadrado\n");
     }
- printf("O raio da circunferencia circunscrita e %f\n", ccircunscrita4);
- printf("A diagonal do retangulo e %f\n", diagonal4);
- printf("A area do retangulo e %f\n\n", area4);
+ printf("O raio da circunferência circunscrita é: %f\n", ccircunscrita4);
+ printf("A diagonal do retângulo é: %f\n", diagonal4);
+ printf("A área do retângulo é: %f\n\n", area4);
     }
     if (figura == 4) {
- printf("Digite o valor do lado do pentagono: ");
+ printf("Digite o valor do lado do pentágono: ");
  float lado5, area5, ccircunscrita5, cinscrita5, diagonal5;
  scanf("%f", &lado5);
  printf("\n");
  ccircunscrita5 = lado5/(2*sin36);
- printf("O raio da circunferencia circunscrita e: %f\n", ccircunscrita5);
+ printf("O raio da circunferência circunscrita é: %f\n", ccircunscrita5);
  cinscrita5 = lado5*cos36/(2*sin36);
- printf("O raio da circunferencia inscrita e: %f\n", cinscrita5);
+ printf("O raio da circunferência inscrita é: %f\n", cinscrita5);
  diagonal5 = lado5*(1 - 2*sin36*sin36)/sin36;
- printf("O tamanho da diagonal e: %f\n", diagonal5);
+ printf("O tamanho da diagonal é: %f\n", diagonal5);
  area5 = 1.25*lado5*lado5*cos36/sin36;
- printf("A area do pentagono e: %f\n\n", area5);
+ printf("A área do pentágono é: %f\n\n", area5);
     }
     if (figura == 5) {
  float lado6, area6, ccircunscrita6, cinscrita6, diagonal61, diagonal62;
- printf("Digite o valor do lado do hexagono regular: ");
+ printf("Digite o valor do lado do hexágono regular: ");
  scanf("%f", &lado6);
  printf("\n");
  ccircunscrita6 = lado6;
- printf("O raio da circunferencia circunscrita ao hexagono e: %f\n", ccircunscrita6);
+ printf("O raio da circunferência circunscrita ao hexágono é: %f\n", ccircunscrita6);
  cinscrita6 = lado6*r3/2;
- printf("O raio da circunferencia inscrita ao hexagono e: %f\n", cinscrita6);
+ printf("O raio da circunferência inscrita ao hexágono é: %f\n", cinscrita6);
  diagonal61 = lado6*r3;
  diagonal62 = 2*lado6;
- printf("O tamanho da diagonal menor e: %f\n", diagonal61);
- printf("O tamanho da diagonal maior e: %f\n", diagonal62);
+ printf("O tamanho da diagonal menor é: %f\n", diagonal61);
+ printf("O tamanho da diagonal maior é: %f\n", diagonal62);
  area6 = 3*lado6*lado6*r3/2;
- printf("A area do hexagono e: %f\n\n", area6);
+ printf("A área do hexágono é: %f\n\n", area6);
     }
     if (figura == 6) {
  float lado8, area8, ccircunscrita8, cinscrita8, diagonal81, diagonal82, diagonal83;
- printf("Digite o valor do lado do octogono regular: ");
+ printf("Digite o valor do lado do octógono regular: ");
  scanf("%f", &lado8);
  printf("\n");
  ccircunscrita8 = lado8*sqrt(1 + r2/2);
- printf("O raio da circunferencia circunscrita ao octogono e: %f\n", ccircunscrita8);
+ printf("O raio da circunferência circunscrita ao octogóno é: %f\n", ccircunscrita8);
  cinscrita8 = ccircunscrita8*ccircunscrita8*r2/(lado8*2);
- printf("O raio da circunferencia inscrita ao octogono e: %f\n", cinscrita8);
+ printf("O raio da circunferência inscrita ao octógono é: %f\n", cinscrita8);
  diagonal81 = lado8*sqrt(2 + r2);
  diagonal82 = lado8*(r2 + 1);
  diagonal83 = 2*ccircunscrita8;
- printf("O tamanho da diagonal menor e: %f\n", diagonal81);
- printf("O tamanho da segunda diagonal e: %f\n", diagonal82);
- printf("O tamanho da maior diagonal e: %f\n", diagonal83);
+ printf("O tamanho da diagonal menor é: %f\n", diagonal81);
+ printf("O tamanho da segunda diagonal é: %f\n", diagonal82);
+ printf("O tamanho da maior diagonal é: %f\n", diagonal83);
  area8 = 2*ccircunscrita8*ccircunscrita8*r2;
- printf("A area do octogono e: %f\n\n", area8);
+ printf("A área do octógono é: %f\n\n", area8);
     }
     if (figura == 7) {
-    printf("Digite o valor do lado do eneagono regular: ");
+    printf("Digite o valor do lado do eneágono regular: ");
     float lado9, area9, ccircunscrita9, cinscrita9, diagonal91, diagonal92, diagonal93;
     const float sin40 = 0.6428;
     const float cos40 = 0.766;
@@ -131,15 +133,15 @@ int main() {
     diagonal92 = lado9*(1 + 2*cos40);
     diagonal93 = (lado9 + sqrt(4*diagonal92*diagonal92 - 3*lado9*lado9))/2;
     area9 = 4.5*ccircunscrita9*ccircunscrita9*sin40;
-    printf("O raio da circunferencia circunscrita ao eneagono e: %f\n", ccircunscrita9);
-    printf("O raio da circunferencia inscrita ao eneagono e: %f\n", cinscrita9);
-    printf("O tamanho da menor diagonal do eneagono e: %f\n", diagonal91);
-    printf("O tamanho da segunda diagonal do eneagono e: %f\n", diagonal92);
-    printf("O tamanho da maior diagonal do eneagono e: %f\n", diagonal93);
-    printf("A area do eneagono e: %f\n\n", area9);
+    printf("O raio da circunferência circunscrita ao eneágono é: %f\n", ccircunscrita9);
+    printf("O raio da circunferência inscrita ao eneágono é: %f\n", cinscrita9);
+    printf("O tamanho da menor diagonal do eneágono é: %f\n", diagonal91);
+    printf("O tamanho da segunda diagonal do eneágono é: %f\n", diagonal92);
+    printf("O tamanho da maior diagonal do eneágono é: %f\n", diagonal93);
+    printf("A área do eneágono é: %f\n\n", area9);
     }
     if (figura == 8) {
-    printf("Digite o valor do lado do dodecaedro regular: ");
+    printf("Digite o valor do lado do dodecágono regular: ");
     float lado12, area12, ccircunscrita12, cinscrita12, diagonal121, diagonal122, diagonal123, diagonal124, diagonal125;
     scanf("%f", &lado12);
     ccircunscrita12 = lado12*sqrt(2)/(sqrt(3) - 1);
@@ -150,14 +152,14 @@ int main() {
     diagonal124 = sqrt(4*ccircunscrita12*ccircunscrita12 - lado12*lado12);
     diagonal125 = 2*ccircunscrita12;
     area12 = 3*ccircunscrita12*ccircunscrita12;
-    printf("\nO raio da circunferencia circunscrita e: %f\n", ccircunscrita12);
-    printf("O raio da circunferencia inscrita e: %f\n", cinscrita12);
+    printf("\nO raio da circunferência circunscrita é: %f\n", ccircunscrita12);
+    printf("O raio da circunferência inscrita é: %f\n", cinscrita12);
     printf("A menor diagonal mede: %f\n", diagonal121);
     printf("A quarta maior diagonal mede: %f\n", diagonal122);
     printf("A terceira maior diagonal mede: %f\n", diagonal123);
     printf("A segunda maior diagonal mede: %f\n", diagonal124);
     printf("A maior diagonal mede: %f\n", diagonal125);
-    printf("A area do dodecaedro e: %f\n\n", area12);
+    printf("A área do dodecágono é: %f\n\n", area12);
     }
     if (figura == 9) {
     float raio, trianguloc0, trianguloi0, quadrado0, pentagono0, hexagono0, heptagono0, octogono0, eneagono0, decagono0, dodecagono0, icosagono0;
@@ -168,7 +170,7 @@ int main() {
     const float cos40 = 0.766;
     const float cos36 = 0.809;
     const float cos18 = 0.9511;
-    printf("Digite o raio da circunferencia: ");
+    printf("Digite o raio da circunferência: ");
     scanf("%f", &raio);
     trianguloi0 = raio*r3;
     trianguloc0 = raio*2*r3;
@@ -182,17 +184,17 @@ int main() {
     dodecagono0 = raio*sqrt(2 - r3);
     icosagono0 = raio*sqrt(2 - 2*cos18);
     printf("\n");
-    printf("O lado do triangulo inscrito a circunferencia e: %f\n", trianguloi0);
-    printf("O lado do triangulo circunscrito a circunferencia e: %f\n", trianguloc0);
-    printf("O lado do quadrado inscrito a circunferencia e: %f\n", quadrado0);
-    printf("O lado do pentagono inscrito a circunferencia e: %f\n", pentagono0);
-    printf("O lado do hexagono inscrito a circunferencia e: %f\n", hexagono0);
-    printf("O lado do heptagono inscrito a circunferencia e: %f\n", heptagono0);
-    printf("O lado do octogono inscrito a circunferencia e: %f\n", octogono0);
-    printf("O lado do eneagono inscrito a circunferencia e: %f\n", eneagono0);
-    printf("O lado do decagono inscrito a circunferencia e: %f\n", decagono0);
-    printf("O lado do dodecagoono inscrito a circunferencia e: %f\n", dodecagono0);
-    printf("O lado do icosagono inscrito a circunferencia e: %f\n\n", icosagono0);
+    printf("O lado do triângulo inscrito a circunferência é: %f\n", trianguloi0);
+    printf("O lado do triângulo circunscrito a circunferência é: %f\n", trianguloc0);
+    printf("O lado do quadrado inscrito a circunferência e: %f\n", quadrado0);
+    printf("O lado do pentágono inscrito a circunferência e: %f\n", pentagono0);
+    printf("O lado do hexágono inscrito a circunferência e: %f\n", hexagono0);
+    printf("O lado do heptágono inscrito a circunferência e: %f\n", heptagono0);
+    printf("O lado do octógono inscrito a circunferência e: %f\n", octogono0);
+    printf("O lado do eneágono inscrito a circunferência e: %f\n", eneagono0);
+    printf("O lado do decágono inscrito a circunferência e: %f\n", decagono0);
+    printf("O lado do dodecágono inscrito a circunferência e: %f\n", dodecagono0);
+    printf("O lado do icoságono inscrito a circunferência e: %f\n\n", icosagono0);
     }
 
     system("pause");
