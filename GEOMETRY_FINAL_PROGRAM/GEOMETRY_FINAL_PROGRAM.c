@@ -5,12 +5,14 @@
 int main() {
     setlocale(LC_ALL, "Portuguese");
     printf("\aEscolha uma figura geométrica:\n\nTriângulo retângulo: 1\nTriângulo equilátero: 2\nRetângulo: 3\nPentágono regular: 4\n");
-    printf("Hexágono regular: 5\nOctógono regular: 6\nEneágono regular: 7\nDodecágono regular: 8\nCircunferência: 9\n\nDigite aqui: ");
+    printf("Hexágono regular: 5\nOctógono regular: 6\nEneágono regular: 7\nDecágono regular: 8\nDodecágono regular: 9\nCircunferência: 10\n\nDigite aqui: ");
     unsigned short figura;
     scanf("%i", &figura);
     const float r2 = 1.4142;
     const float r3 = 1.732;
     const float pi = 3.1416;
+    const float sen18 = 0.309;
+    const float cos18 = 0.951;
     const float sin36 = 0.5878;
     const float cos36 = 0.1564;
     printf("\n");
@@ -141,6 +143,26 @@ int main() {
     printf("A área do eneágono é: %f\n\n", area9);
     }
     if (figura == 8) {
+        printf("Digite o valor do lado do decágono regular: ");
+    float lado10, area10, ccircunscrita10, cinscrita10, diagonal101, diagonal102, diagonal103, diagonal104;
+    scanf("%f", &lado10);
+    printf("\n");
+    ccircunscrita10 = lado10/(2*sen18);
+    cinscrita10 = sqrt(4*ccircunscrita10*ccircunscrita10 - lado10*lado10)/2;
+    diagonal101 = 2*lado10*cos18;
+    diagonal102 = diagonal101*cos18 + sqrt(lado10*lado10 - diagonal101*diagonal101*sen18*sen18);
+    diagonal103 = 2*ccircunscrita10*(2*cos18*cos18 - 1);
+    diagonal104 = 2*ccircunscrita10;
+    area10 = 5*lado10*cinscrita10;
+    printf("O raio da circunferência circunscrita ao decágono é: %f\n", ccircunscrita10);
+    printf("O raio da circunferência inscrita ao decágono é: %f\n", cinscrita10);
+    printf("A menor diagonal do decágono mede: %f\n", diagonal101);
+    printf("A segunda menor diagonal do decágono mede: %f\n", diagonal102);
+    printf("A terceira menor diagonal do decágono mede: %f\n", diagonal103);
+    printf("A maior diagonal do decágono mede: %f\n", diagonal104);
+    printf("A área do decágono é: %f\n\n", area10);
+    }
+    if (figura == 9) {
     printf("Digite o valor do lado do dodecágono regular: ");
     float lado12, area12, ccircunscrita12, cinscrita12, diagonal121, diagonal122, diagonal123, diagonal124, diagonal125;
     scanf("%f", &lado12);
@@ -161,7 +183,7 @@ int main() {
     printf("A maior diagonal mede: %f\n", diagonal125);
     printf("A área do dodecágono é: %f\n\n", area12);
     }
-    if (figura == 9) {
+    if (figura == 10) {
     float raio, trianguloc0, trianguloi0, quadrado0, pentagono0, hexagono0, heptagono0, octogono0, eneagono0, decagono0, dodecagono0, icosagono0;
     const float r2 = 1.4142;
     const float r3 = 1.732;

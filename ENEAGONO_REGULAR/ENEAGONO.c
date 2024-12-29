@@ -19,7 +19,7 @@ int main() {
     printf("O raio da circunferencia circunscrita ao eneagono e: %f\n", ccircunscrita9);
     printf("O raio da circunferencia inscrita ao eneagono e: %f\n", cinscrita9);
     printf("A menor diagonal do eneagono mede: %f\n", diagonal91);
-    printf("A diagonal 'media' do eneagono mede: %f\n", diagonal92);
+    printf("A segunda menor diagonal do eneagono mede: %f\n", diagonal92);
     printf("A maior diagonal do eneagono mede: %f\n", diagonal93);
     printf("A area do eneagono e: %f\n\n", area9);
 
