@@ -31,6 +31,10 @@ _**Programa Final**_: use **qualquer** dos conteúdos abaixo em um só programa
 
 7- _**Eneágono**_: insira o valor dos lados e o programa dá como resultado: as três **diagonais**, o **raio da circunferência circunscrita**, o **raio da circunferência inscrita** e sua **área**;
 
-8- _**Dodecágono**_: insira o valor dos lados e o programa dá como resultado: as cinco **diagonais**, o **raio da circunferência circunscrita**, o **raio da circunferência inscrita** e sua **área**;
+8- _**Decágono**_: insira o valor dos lados e o programa dá como resultado: as quatro **diagonais**, o **raio da circunferência circunscrita**, o **raio da circunferência inscrita** e sua **área**;
 
-9- _**Circunferência**_: insira o valor do raio e o programa dá como resultado: os lados do triângulo equilátero inscrito, triângulo equilátero circunscrito, quadrado inscrito, pentágono regular inscrito, hexágono regular inscrito, heptágono regular inscrito, octógono regular inscrito, eneágono regular inscrito, decágono regular inscrito, dodecágono regular inscrito, icoságono regular inscrito;
+9- _**Dodecágono**_: insira o valor dos lados e o programa dá como resultado: as cinco **diagonais**, o **raio da circunferência circunscrita**, o **raio da circunferência inscrita** e sua **área**;
+
+10 - _**Icoságono**_: _**ainda não terminado**_
+
+11- _**Circunferência**_: insira o valor do raio e o programa dá como resultado: os lados do triângulo equilátero inscrito, triângulo equilátero circunscrito, quadrado inscrito, pentágono regular inscrito, hexágono regular inscrito, heptágono regular inscrito, octógono regular inscrito, eneágono regular inscrito, decágono regular inscrito, dodecágono regular inscrito, icoságono regular inscrito;
