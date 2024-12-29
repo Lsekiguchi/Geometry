@@ -5,13 +5,15 @@
 int main() {
     setlocale(LC_ALL, "Portuguese");
     printf("\aEscolha uma figura geométrica:\n\nTriângulo retângulo: 1\nTriângulo equilátero: 2\nRetângulo: 3\nPentágono regular: 4\n");
-    printf("Hexágono regular: 5\nOctógono regular: 6\nEneágono regular: 7\nDecágono regular: 8\nDodecágono regular: 9\nCircunferência: 10\n\nDigite aqui: ");
+    printf("Hexágono regular: 5\nOctógono regular: 6\nEneágono regular: 7\nDecágono regular: 8\nDodecágono regular: 9\nIcoságono regular: 10\nCircunferência: 11\n\nDigite aqui: ");
     unsigned short figura;
     scanf("%i", &figura);
     const float r2 = 1.4142;
     const float r3 = 1.732;
     const float pi = 3.1416;
-    const float sen18 = 0.309;
+    const float sin9 = 0.1564;
+    const float cos9 = 0.9877;
+    const float sin18 = 0.309;
     const float cos18 = 0.951;
     const float sin36 = 0.5878;
     const float cos36 = 0.1564;
@@ -147,10 +149,10 @@ int main() {
     float lado10, area10, ccircunscrita10, cinscrita10, diagonal101, diagonal102, diagonal103, diagonal104;
     scanf("%f", &lado10);
     printf("\n");
-    ccircunscrita10 = lado10/(2*sen18);
+    ccircunscrita10 = lado10/(2*sin18);
     cinscrita10 = sqrt(4*ccircunscrita10*ccircunscrita10 - lado10*lado10)/2;
     diagonal101 = 2*lado10*cos18;
-    diagonal102 = diagonal101*cos18 + sqrt(lado10*lado10 - diagonal101*diagonal101*sen18*sen18);
+    diagonal102 = diagonal101*cos18 + sqrt(lado10*lado10 - diagonal101*diagonal101*sin18*sin18);
     diagonal103 = 2*ccircunscrita10*(2*cos18*cos18 - 1);
     diagonal104 = 2*ccircunscrita10;
     area10 = 5*lado10*cinscrita10;
@@ -184,6 +186,36 @@ int main() {
     printf("A área do dodecágono é: %f\n\n", area12);
     }
     if (figura == 10) {
+    float lado20, area20, ccircunscrita20, cinscrita20, diagonal201, diagonal202, diagonal203, diagonal204, diagonal205, diagonal206, diagonal207, diagonal208, diagonal209;
+    printf("Digite o valor do lado do icoságono regular: ");
+    scanf("%f", &lado20);
+    printf("\n");
+    ccircunscrita20 = lado20/(2*sin9);
+    cinscrita20 = ccircunscrita20*cos9;
+    diagonal201 = 2*lado20*cos9;
+    diagonal202 = ccircunscrita20*sqrt(2 - 2*sin36);
+    diagonal203 = ccircunscrita20*sqrt(2 - 2*sin18);
+    diagonal204 = ccircunscrita20*sqrt(2);
+    diagonal205 = ccircunscrita20*sqrt(2 + 2*sin18);
+    diagonal206 = ccircunscrita20*sqrt(2 + 2*sin36);
+    diagonal207 = 2*ccircunscrita20*cos18;
+    diagonal208 = 2*ccircunscrita20*cos9;
+    diagonal209 = 2*ccircunscrita20;
+    area20 = 10*lado20*cinscrita20;
+    printf("O raio da circunferência circunscrita ao icoságono é: %f\n", ccircunscrita20);
+    printf("O raio da circunferência inscrita ao icoságono é: %f\n", cinscrita20);
+    printf("A menor diagonal do icoságono mede: %f\n", diagonal201);
+    printf("A segunda menor diagonal do icoságono mede: %f\n", diagonal202);
+    printf("A terceira menor diagonal do icoságono mede: %f\n", diagonal203);
+    printf("A quarta menor diagonal do icoságono mede: %f\n", diagonal204);
+    printf("A quinta menor diagonal do icoságono mede: %f\n", diagonal205);
+    printf("A sexta menor diagonal do icoságono mede: %f\n", diagonal206);
+    printf("A setima menor diagonal do icoságono mede: %f\n", diagonal207);
+    printf("A oitava menor diagonal do icoságono mede: %f\n", diagonal208);
+    printf("A maior diagonal do icoságono mede: %f\n", diagonal209);
+    printf("A área do icoságono é: %f\n\n", area20);
+    }
+    if (figura == 11) {
     float raio, trianguloc0, trianguloi0, quadrado0, pentagono0, hexagono0, heptagono0, octogono0, eneagono0, decagono0, dodecagono0, icosagono0;
     const float r2 = 1.4142;
     const float r3 = 1.732;
