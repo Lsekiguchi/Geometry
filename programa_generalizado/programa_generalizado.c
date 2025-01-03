@@ -6,7 +6,7 @@ int main() {
     setlocale(LC_ALL, "Portuguese");
     printf("Digite o número de lados do polígono regular: ");
     unsigned int num, diagnum, aux; //num -> n° de lados; diagnum -> n° de diagonais
-    float lado, ang, ccircunscrita, cinscrita, arco; //lado -> tamanho dos lados; ang -> ângulo em cada vértice
+    float lado, ang, ccircunscrita, cinscrita, arco, area; //lado -> tamanho dos lados; ang -> ângulo em cada vértice
     const float pi = 3.14159265;
     scanf("%i", &num);
     printf("Digite o tamanho dos lados do polígono regular: ");
@@ -34,13 +34,10 @@ int main() {
         printf(", %f", diagonais[aux]);
         aux++;
     }
-    printf("\n\n");
+    printf("\n");
     }
-
-
-
-
-
+    area = num*lado*cinscrita/2;
+    printf("A área do polígono é: %f\n\n", area);
     system("pause");
     return 0;
 }
