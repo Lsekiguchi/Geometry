@@ -4,11 +4,16 @@
 
 int main() {
     setlocale(LC_ALL, "Portuguese");
+    inicio:
     printf("Digite o número de lados do polígono regular: ");
     unsigned int num, diagnum, aux; //num -> n° de lados; diagnum -> n° de diagonais
     float lado, ang, ccircunscrita, cinscrita, arco, area; //lado -> tamanho dos lados; ang -> ângulo em cada vértice
     const float pi = 3.14159265;
     scanf("%i", &num);
+    if (num < 3) {
+        printf("Um polígono possui, no mínimo, 3 lados.\n\n");
+        goto inicio;
+    }
     printf("Digite o tamanho dos lados do polígono regular: ");
     scanf("%f", &lado);
     ang = pi*(num - 2)/num;
