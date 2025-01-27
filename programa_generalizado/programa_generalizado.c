@@ -43,6 +43,12 @@ int main() {
     }
     area = num*lado*cinscrita/2;
     printf("A área do polígono é: %f\n\n", area);
+    printf("Se você quiser executar o programa novamente, digite 0. Ou digite qualquer outro número para encerrar o programa: ");
+    scanf("%i", &num);
+    if (num == 0) {
+            printf("\n");
+            goto inicio;
+    }
     system("pause");
     return 0;
 }
